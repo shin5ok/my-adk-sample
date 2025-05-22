@@ -11,7 +11,7 @@ poet_agent = LlmAgent(
     description='generate a poet',
     instruction='100文字程度で詩を作成する',
     output_key='poet',
-    tool=[poet_tool],
+    # tool=[poet_tool],
 )
 
 
@@ -19,7 +19,7 @@ regional_lang_agent= LlmAgent(
     model='gemini-2.0-flash-001',
     name='hougen_agent',
     description='日本の方言に変換する',
-    instruction='指定された方言で、この文章を変換して\n{poet}',
+    instruction='博多弁で、この文章を変換して\n{poet}',
 )
 
 seq_agent = SequentialAgent(
