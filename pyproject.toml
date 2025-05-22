@@ -1,0 +1,15 @@
+[project]
+name = "my-adk-sample"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-adk>=1.0.0",
+]
+
+[mypy]
+ignore_missing_imports = true
+
+[tool.mypy.overrides]
+google.adk.agents.llm = {ignore_missing_imports = true}
